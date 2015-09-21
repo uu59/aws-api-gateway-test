@@ -1,0 +1,26 @@
+{
+  "name": "apigatewaytest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "babel src/ -d lib/ -w",
+    "build": "./runner.coffee build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "4.0.0"
+  },
+  "author": "uu59",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "coffee-script": "^1.10.0",
+    "espower-babel": "^3.3.0",
+    "mocha": "^2.3.3",
+    "shelljs": "^0.5.3"
+  },
+  "dependencies": {
+    "request": "^2.63.0"
+  }
+}
