@@ -1,7 +1,9 @@
-var request = require("request");
+import request from "request"
+import env from "./env.js"
 
 export default function notifySlack (message, done) {
-  const SLACK_ENDPOINT = "https://hooks.slack.com/services/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+  const SLACK_ENDPOINT = env.SLACK_ENDPOINT
+
   request.post({
     url: SLACK_ENDPOINT,
     form: { payload: JSON.stringify(message) }
