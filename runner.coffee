@@ -2,12 +2,13 @@
 
 require('shelljs/make')
 
+entry_point = "entry.js"
+pkgfile = "entry.zip"
+
 pkg = require("./package")
 node_modules = Object.keys(pkg.dependencies).map (module) -> "node_modules/" + module
-dependencies = node_modules.concat(["app.js", "lib/"])
+dependencies = node_modules.concat([entry_point, "lib/"])
 
-entry_point = "app.js"
-pkgfile = "app.zip"
 
 target.build = ->
   exec "babel ./src -d ./lib"
